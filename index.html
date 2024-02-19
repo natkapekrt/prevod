@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Převodník měn</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 style="border:2px solid DodgerBlue;">Převodník měn</h1>
+    <form action="index.html" method="post">
+        <label for="amount">Zadejte částku:</label>
+        <input type="number" id="amount" name="amount" required>
+        <label for="source_currency">Zdrojová měna:</label>
+        <select id="source_currency" name="source_currency">
+            <option value="CZK">CZK - Česká koruna</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="USD">USD - Americký dolar</option>
+            </select>
+        <label for="target_currency">Cílová měna:</label>
+        <select id="target_currency" name="target_currency">
+            <option value="CZK">CZK - Česká koruna</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="USD">USD - Americký dolar</option>
+            </select>
+        <button type="submit">Převést</button>
+        <input type="number" id="myInput" value="10">
+       
+    </form>
+
+    <h1 style="border:2px solid DodgerBlue;">Kalkulačka spoření/investic:</h1>
+    <form action="index.php" method="post">
+        <label for="initial_amount">Počáteční částka:</label>
+        <input type="number" id="initial_amount" name="initial_amount" required>
+        <br>
+        <label for="monthly_deposit">Měsíční vklad:</label>
+        <input type="number" id="monthly_deposit" name="monthly_deposit" required>
+        <br>
+        <label for="annual_interest_rate">Roční úroková sazba:</label>
+        <input type="number" id="annual_interest_rate" name="annual_interest_rate" required>
+        <br>
+        <label for="duration">Doba trvání (v letech):</label>
+        <input type="number" id="duration" name="duration" required>
+        <br>
+        <br>
+        <button type="submit">Vypočítat</button>
+    </form>
+    
+    <h1 style="border:2px solid DodgerBlue;">Výpočet DPH:</h1>
+    <form action="index.php" method="post">
+        <label for="amount_with_vat">Částka s DPH:</label>
+        <input type="number" id="amount_with_vat" name="amount_with_vat" required>
+        <br>
+        <br>
+        <button type="submit" name="calculate_without_vat">Vypočítat bez DPH</button>
+    </form>
+    
+    <br>
+    
+    <form action="index.php" method="post">
+        <label for="amount_without_vat">Částka bez DPH:</label>
+        <input type="number" id="amount_without_vat" name="amount_without_vat" required>
+        <br>
+        <br>
+        <button type="submit" name="calculate_with_vat">Vypočítat s DPH</button>
+    <img src="https://financniarchitekti.cz/wp-content/uploads/2021/12/money-g0bbfe22df_640.jpg" style="width:100%;">
+    </form> 
+    
+</body>
+</html>
